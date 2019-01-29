@@ -18,6 +18,11 @@
         <!-- font awesome icons -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+        <!-- reflection -->
+        <script src="reflection.js"></script>
+        
+        <!-- carousel -->
+        <script src="jquery.cloud9carousel.js"></script>
     </head>
     <body>
         <header>
@@ -73,7 +78,7 @@
                         </p>
                     </div>
                     <div>
-                        <img src="hydro.JPG" alt="" />
+                        <img src="" alt="" />
                     </div>
                 </div>
             </div>
@@ -93,7 +98,7 @@
                         est dictas mnesarchum in. Sed no apeirian platonem, nam nostrum molestiae intellegam cu. Sea eu idque incorrupte consectetuer. Id natum laudem minimum ius, eum te tamquam
                         admodum epicurei.
                     </p>
-                    <img src="hydro.JPG" alt="" />
+                    <img src="" alt="" />
                 </div>
             </div>
         </div>
@@ -101,20 +106,21 @@
         <!-- features section -->
         <a name="features"></a>
         <div id="features" class="section">
-            <div class="container">
-                <div class="features-content">
-                    <div>
-                        <img src="hydro.JPG" alt="">
-                    </div>
-                    <div>
-                        <h2>Features</h2>
+                <div id="wrap">
+                    <h2>Features</h2>
+                    <div id="showcase">
                         
-                        <h4>&#10148; Easy to install</h4>
+                        <img src="circle-hydro copy.png" alt="Cost" class="cloud9-item">
                         
-                        <h4>&#10148; Low cost</h4>
+                        <img src="circle-hydro copy.png" alt="&#10148; Generates Electricity" class="cloud9-item">
                        
-                        <h4>&#10148; Generates Electricity</h4>
-                        
+                        <img src="circle-hydro copy.png" alt="&#10148; Easy to install" class="cloud9-item">
+                    </div>
+                
+                    <p id="item-title">&nbsp;</p>
+                    <div class="nav2 noselect">
+                        <button class="left"><i class="fa fa-arrow-left"></i></button>
+                        <button class="right"><i class="fa fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -130,6 +136,58 @@
                 <button type="button">Order</button>
             </div>
         </div>
+
         <script src="hydro.js"></script>
+        <script type="text/javascript">
+
+        $(function() {
+
+            var showcase = $("#showcase")
+            showcase.Cloud9Carousel( {
+                yPos: 42,
+                yRadius: 48,
+                mirrorOptions: {
+                gap: 12,
+                height: 0.2
+            },
+            buttonLeft: $(".nav2 > .left"),
+            buttonRight: $(".nav2 > .right"),
+            autoPlay: false,
+            bringToFront: true,
+
+            onRendered: showcaseUpdated,
+            onLoaded: function() {
+                showcase.css( 'visibility', 'visible' )
+                showcase.css( 'display', 'none' )
+                showcase.fadeIn( 1500 )
+            }
+        })
+
+        function showcaseUpdated( showcase ) {
+            var title = $("#item-title").html(
+                $(showcase.nearestItem()).attr( 'alt' )
+            )
+
+            var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI)
+            title.css('opacity', 0.5 + (0.5 * c))
+        }
+
+        $('.nav2 > button').click( function( e ) {
+            var b = $(e.target).addClass( 'down' )
+            setTimeout( function() {b.removeClass( 'down' ) }, 80)
+        })
+
+        $(document).keydown( function( e ) {
+            switch( e.keyCode ) {
+                case 37:
+                $('.nav2 > .left').click()
+                break
+
+                case 39:
+                $('.nav2 > .right').click()
+            }
+        })
+        })
+        </script>
     </body>
 </html>
