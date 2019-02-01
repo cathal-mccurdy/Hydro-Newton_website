@@ -119,12 +119,13 @@ nav a
     text-decoration: none;
     padding: 20px 0;
     color: #8D8273;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 nav a:hover 
 {
     color: #6C6C6C;
+    font-size: 18px;
 }
 
 nav a#toggle-btn 
@@ -207,7 +208,7 @@ nav a#toggle-btn
 .section-hero 
 {
     width:100%;
-    height: 100vh;
+    height: 110vh;
     margin: 0;
     padding:0;
     overflow-y: hidden;
@@ -218,10 +219,26 @@ nav a#toggle-btn
     margin-top: 34vh;
 }
 
+.section-hero h1
+{
+    font-weight: 600;
+}
+
 .section-hero h2
 {
     color: #8D8273;
+}
 
+.section-hero p 
+{
+    font-size: 20px;
+}
+
+#hero
+{
+    font-size: 140px;
+    margin: 0.5em;
+    color: #2e9cca
 }
 
 /* overview */
@@ -280,6 +297,7 @@ nav a#toggle-btn
 #wrap
 {
     width: 100%;
+    
 }
 
 #wrap h2
@@ -291,8 +309,9 @@ nav a#toggle-btn
 #showcase
 {
     width: 100%;
-    height: 480px;
-   
+    height: 380px;
+    
+    font-weight: 400
 }
 
 
@@ -302,6 +321,7 @@ nav a#toggle-btn
     opacity: 1;
     height: 163px;
     width: 163px;
+    font-weight: 400;
 }
 
 #item-title 
@@ -313,6 +333,7 @@ nav a#toggle-btn
     margin-top: -20px;
     margin-bottom: 30px;
     font-family: Roboto;
+    font-weight: 400;
 }
 
 .nav2 
@@ -336,6 +357,31 @@ nav a#toggle-btn
     border: none;
 }
 
+#features-content ul
+{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#features-content li
+{
+    display: inline;
+    
+}
+
+#features-content h4 p 
+{
+    display: inline-block;
+    width: 100px;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    padding: 20px 0;
+    color: #8D8273;
+    transition: 1s;
+}
+
 /* subscribe section */
 
 #subscribe
@@ -355,7 +401,14 @@ nav a#toggle-btn
     font-family: Roboto;
     font-weight: 400;
     font-size: 15px;
-    color: rgb(211, 165, 100)
+    color: rgb(211, 165, 100);
+    text-align: left;
+}
+
+#subscribe input:hover
+{
+    font-size: 16px;
+    transition: 0.02s;
 }
 
 #subscribe input:focus
@@ -363,6 +416,7 @@ nav a#toggle-btn
     border: none;
     outline: none;
     border: 2px solid #8D8273;
+    
 }
 
 input::placeholder
@@ -370,5 +424,11 @@ input::placeholder
     color: #8D8273;
     text-transform: uppercase;
     font-weight: 400;
+    text-align: left;
+}
+
+#subscribe::placeholder:focus
+{
+    color: #343434;
 }
 
