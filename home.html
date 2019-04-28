@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hydro Newton</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="hydro.css" />
+
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <ul class="menu">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#overview">Overview</a>
+                    </li>
+
+                    <li>
+                        <a href="#features">Aims</a>
+                    </li>
+                    
+
+                </ul>
+                <a href="#" id="toggle-btn"><i class="fa fa-tint"></i>HYDRO-NEWTON</a>
+            </nav>
+        </header>
+
+        <!-- content -->
+        <a name="home"></a>
+        <div class="section-hero">
+            <div class="container">
+                <img src="logo.png">
+            </div>
+        </div>
+
+        <!-- overview section -->
+        <a name="overview"></a>
+        <div id="overview" class="section">
+            <div class="container">
+                <div class="overview-content">
+                    <div>
+                        <h2>Overview</h2>
+                        <p>
+                            We believe in giving people the power to fight global warming
+                            on there doorsteps. As we believe that in order to combat climate change,
+                            it's going to take the actions of individuals and not of nations. 
+                            Hydroelectricity is the most efficient way to convert available energy to electricity. 
+                            However the most common sources of power in the household is fossil fuels. 
+                            This made no sense to me, seen as we are heading in the direction where by the year 2052 we going to run out of fossil fuels. 
+                        </p>
+
+                        <p>
+                            The reason hydroelectricity is not used as much as other sources as there are only so many rivers in Ireland and most of them already have hydroelectric power stations.
+                            What if there was another way to harvest hydropower, well thats what I hope to achieve with my device, the hydro-newton. It is a turbine that you attach to the end of 
+                            the downpipe of your gutter. It uses the rainwater falling down the downpipe of the gutter to turn the turnine and generate electricity  
+                            The three aims of this device is to be efficient in the Irish climate, be a cheap source of renewable energy and to be simple to install and use, 
+                            to assist in lowering the costs of installation and maintenance. 
+                        </p>
+
+                        
+                    </div>
+                    <div>
+                        <img src="overview.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about section -->
+        <a name="about"></a>
+        <div id="about" class="section">
+            <div class="container">
+                <div class="overview-content">
+                    <h2>
+                        <i class="fa fa-tint"></i>hydro-newton
+                    </h2>
+                    <h3>Capture the drops</h3>
+                    <p>
+                        Ireland has set the ambitious goal of reaching 70% of all energy produced to be renewable by 2030 
+                        . However, in 2010, 15% of the energy was renewable , in four years this only increased by 6%. 
+                        This means that if we keep going at the same rate of improvement then we’ll only be at 45%, that’s 25% off our goal! 
+                        This means we need to drastically increase the amount of renewable energy. One way of doing this is to increase 
+                        Hydroelectricity production. The main issue with this is that there are many disadvantages of Hydroelectric dams, 
+                        such as how 
+                        it's expensive and the Environmental Consequences e.g. the flooding of land in the building of the reservoir.
+                        These only apply to Hydroelectric dams which is currently the only method of harvesting hydroelectricity.
+                        However, I propose a new way, a better way. A way that has zero environmental consequences and is low cost. 
+                        This is to utilize all the rainwater flowing out of all our gutters. If these devices are implemented in 
+                        households across the country we can help drastically improve the rate at which we reach our goal of 70% by 2030.  
+                        As Hydroelectric power is the most efficient way to turn available energy to electricity, which an efficiency rate of 90%,
+                         however the majority of the renewable energy produced in Ireland is wind and that has an energy conversion rate of 50% at best.
+
+                    </p>
+                    <img src="rainfall.gif" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- features section -->
+        <a name="features"></a>
+        <div id="features" class="section">
+            <div class="container">
+                <div class="features-content">
+                    <div>
+                        <img src="hydro.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>Aims</h2>
+                        <h4>&#10148; Low Cost</h4>
+                        <p>
+                            The aim of the Hydro-Newton was always to be low cost in order to be available to everyone. 
+                            
+                        </p>
+                        <h4>&#10148; Generate Electricity</h4>
+                        <p>
+                            It is a source of renewable energy after all.
+                        </p>
+                        <h4>&#10148; Easy to install</h4>
+                        <p>
+                            All you need to do is install a few screws and wire up the device to the battery 
+                            and away you go. You are generating electricity and don't need to maintain the system
+                            , just sit back relax and enjoy that free electricity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- subscribe section -->
+   
+
+        <script src="hydro.js"></script>
+        <script>
+        $(function() {
+
+            var content = "Sent"
+
+            $('#order').on('click', function() {
+                var btn_text = $(this).attr('data-panelid');
+                $('#'+btn_text).html(content);
+            });
+
+        }
+        </script>
+    </body>
+</html>
